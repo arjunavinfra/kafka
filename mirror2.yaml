@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mirror-maker
+  namespace: kafka2
+spec:
+  selector:
+    matchLabels:
+     app: mirror-maker
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mirror-maker
+    spec:
+      containers:
+      - name: mirror-maker
+        image: wpietri/mirror-maker:2
+        imagePullPolicy: Always
+        env:
+        # - name: "WHITELIST"
+        #   value: "*"
+        - name: "DESTINATION"
+          value: "10.42.3.12:9092"
+        - name: "SOURCE"
+          value: "10.42.0.16:9092"
