@@ -10,7 +10,8 @@ k3d cluster create kube-cluster \
 ```
 
 NOTE
-Modify the bootstrap address on mirri2-maker.yaml before apply 
+Modify the bootstrap address on mirri2-maker.yaml before apply the yamls
+
 bootstrap addres can fetch from 
 
 ```ruby
