@@ -17,7 +17,7 @@ kafka consumer
 
 
 ```ruby
-kubectl run kafka-consumer -ti --image=strimzi/kafka:0.20.1-kafka-2.5.1 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server netflix-kafka-bootstrap:9092 --topic test --from-beginning
+kubectl run kafka-consumer-${RANDOM}  -ti --image=strimzi/kafka:0.20.1-kafka-2.5.1 --rm=true --restart=Never -- bin/kafka-console-consumer.sh --bootstrap-server netflix-kafka-bootstrap:9092 --topic test --from-beginning
 ```
 
 
