@@ -4,7 +4,7 @@ for creating topic kafka cluster 1kafka 1
 
 
 ```ruby
-kubectl -n strimzi run kafka-topic-creator -ti --image=strimzi/kafka:0.20.1-kafka-2.5.1 --rm=true --restart=Never --  bin/kafka-topics.sh --bootstrap-server netflix-kafka-bootstrap:9092 --topic test --create --partitions 1 --replication-factor 1``` 
+kubectl  run kafka-topic-creator-${RANDOM} -ti --image=strimzi/kafka:0.20.1-kafka-2.5.1 --rm=true --restart=Never --  bin/kafka-topics.sh --bootstrap-server netflix-kafka-bootstrap:9092 --topic test --create --partitions 1 --replication-factor 1``` 
 ```
 
 for listing the created topic and it's attributes
