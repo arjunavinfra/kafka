@@ -2560,11 +2560,11 @@ metadata:
   name: strimzi-cluster-operator-leader-election
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-leader-election
@@ -5670,7 +5670,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-kafka-broker
@@ -5683,11 +5683,11 @@ metadata:
   name: strimzi-cluster-operator-watched
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-watched
@@ -5703,7 +5703,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-global
@@ -8435,7 +8435,7 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 spec:
   replicas: 1
   selector:
@@ -8848,7 +8848,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-kafka-client
@@ -9917,7 +9917,7 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 data:
   log4j2.properties: >
     name = COConfig
@@ -10013,11 +10013,11 @@ metadata:
   name: strimzi-cluster-operator-entity-operator-delegation
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-entity-operator
@@ -10030,11 +10030,11 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 subjects:
   - kind: ServiceAccount
     name: strimzi-cluster-operator
-    namespace: strimzi
+    namespace: netflix
 roleRef:
   kind: ClusterRole
   name: strimzi-cluster-operator-namespaced
@@ -10047,7 +10047,7 @@ metadata:
   name: strimzi-cluster-operator
   labels:
     app: strimzi
-  namespace: strimzi
+  namespace: netflix
 
 ---
 apiVersion: apiextensions.k8s.io/v1
