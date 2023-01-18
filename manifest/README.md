@@ -1,5 +1,31 @@
 # kafka mirror 2.0
 
-Apache Kafka MirrorMaker replicates data across two Kafka clusters, within or across data centers. MirrorMaker takes messages from a source Kafka cluster and writes them to a target Kafka cluster, which makes it a very useful tool for those wanting to ensure the availability and consistency of their enterprise data
+```ruby
+k3d cluster create kube-cluster \
+  --agents 3 \
+  --k3s-node-label topology.kubernetes.io/zone=zone-a@agent:0 \
+  --k3s-node-label topology.kubernetes.io/zone=zone-b@agent:1 \
+  --k3s-node-label topology.kubernetes.io/zone=zone-c@agent:2
 
-we can install it using yaml manifest or by using operator strimzi
+```
+
+NOTE
+Modify the bootstrap address on mirri2-maker.yaml before apply 
+bootstrap addres can fetch from 
+
+```ruby
+kubectl get endpoints
+``` 
+
+
+then apply all the manifest files 
+
+```ruby
+kubectl apply -f ./
+```
+
+
+
+# #cli (kafka1)
+
+# kubectl run kafka-client-${RANDOM} --rm -ti --image bitnami/kafka:3.1.0 -- bash
