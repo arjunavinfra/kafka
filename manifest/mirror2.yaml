@@ -21,6 +21,6 @@ spec:
         # - name: "WHITELIST"
         #   value: "*"
         - name: "DESTINATION"
-          value: "10.42.3.12:9092"
+          value: "<kafka bootstrap address>"
         - name: "SOURCE"
-          value: "10.42.0.16:9092"
+          value: "<kafka bootstrap address>"
