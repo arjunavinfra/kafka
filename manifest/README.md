@@ -25,8 +25,3 @@ then apply all the manifest files
 kubectl apply -f ./
 ```
 
-
-
-# #cli (kafka1)
-
-# kubectl run kafka-client-${RANDOM} --rm -ti --image bitnami/kafka:3.1.0 -- bash
