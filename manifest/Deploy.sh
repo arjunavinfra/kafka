@@ -4,6 +4,7 @@ k3d cluster create kube-cluster \
   --k3s-node-label topology.kubernetes.io/zone=zone-b@agent:1 \
   --k3s-node-label topology.kubernetes.io/zone=zone-c@agent:2
 
+ k3d registry create test-app-registry --port 5050
 
 kubectl apply -f ./
 
