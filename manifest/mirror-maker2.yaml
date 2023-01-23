@@ -18,9 +18,9 @@ spec:
         image: wpietri/mirror-maker:2
         imagePullPolicy: Always
         env:
-        # - name: "WHITELIST"
-        #   value: "*"
+        - name: "WHITELIST"
+          value: "*"
         - name: "DESTINATION"
-          value: "<kafka bootstrap address>"
+          value: "kafka-svc.kafka2.svc.cluster.local:9092"
         - name: "SOURCE"
-          value: "<kafka bootstrap address>"
+          value: "kafka-svc.kafka1.svc.cluster.local:9092"

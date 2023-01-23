@@ -18,23 +18,23 @@ NOTE bootstrap addres can fetch from ```ruby kubectl get endpoints```
 
 # #Create a topic with at least 2 partitions and send data to it
 
-# kafka-topics.sh --bootstrap-server 10.42.0.16:9092 --topic test --create --partitions 1 --replication-factor 1
+# kafka-topics.sh --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092 --topic test --create --partitions 1 --replication-factor 1
 
 
 # #Create a first kafka-console-consumer and assign a group name with --group (kafka1)
 
-# kafka-console-consumer.sh  --bootstrap-server 10.42.0.16:9092 --topic  test --group my-group
+# kafka-console-consumer.sh  --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092  --topic  test --group my-group
 
 # #Create a secound kafka-console-consumer and assign a group name with --group (kafka1) - new terminal 
 
-# kafka-console-consumer.sh  --bootstrap-server 10.42.0.16:9092 --topic  test --group my-group
+# kafka-console-consumer.sh  --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092  --topic  test --group my-group
 
 # #Send data to the topic and you will see consumers sharing the reads
 
 #   kafka-console-producer.sh \
 #   --topic  test \
 #   --request-required-acks all \
-#   --bootstrap-server 10.42.0.16:9092
+#   --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092
 
 
 
@@ -45,18 +45,18 @@ NOTE bootstrap addres can fetch from ```ruby kubectl get endpoints```
 #    kafka-console-consumer.sh \
 #    --topic  test \
 #    --from-beginning \
-#    --bootstrap-server 10.42.0.16:9092
+#    --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092
 
 # #list topic 
 
-#     kafka-topics.sh --bootstrap-server 10.42.0.6:9092,10.42.2.7:9092,10.42.3.5:9092\
+#     kafka-topics.sh --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092\
 #     --list #cluster 1
-#     kafka-topics.sh --bootstrap-server 10.42.0.8:9092,10.42.2.9:9092,10.42.3.7:9092\
+#     kafka-topics.sh --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092\
 #     --list #cluster 2
 
 # # describe topic
 
-#     kafka-topics.sh --describe --bootstrap-server 10.42.0.6:9092,10.42.2.7:9092,10.42.3.5:9092\
+#     kafka-topics.sh --describe --bootstrap-server kafka-svc.kafka1.svc.cluster.local:9092\
 #     --topic test
 
 
